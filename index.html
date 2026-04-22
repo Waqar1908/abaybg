@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Abaya Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">Abaya Admin</div>
+
+    <div class="actions">
+      <input id="search" placeholder="Search products..." oninput="load()" />
+      <button class="btn-primary" onclick="openModal()">+ Add Product</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="list" class="grid"></div>
+    <div id="pagination" class="pagination"></div>
+  </main>
+
+  <footer class="footer">
+    © 2026 Abaya Store • Admin Panel
+  </footer>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle">Add Product</h3>
+        <span onclick="closeModal()">✕</span>
+      </div>
+
+      <div class="form-grid">
+        <input id="name" placeholder="Product Name">
+        <input id="price" type="number" placeholder="Price">
+        <input id="slug" placeholder="Slug">
+        <input id="fabric" placeholder="Fabric">
+        <input id="color" placeholder="Color">
+      </div>
+
+      <textarea id="shortDescription" placeholder="Short Description"></textarea>
+      <textarea id="description" placeholder="Full Description"></textarea>
+
+      <input id="images" placeholder="Image URLs (comma separated)">
+      
+      <div class="modal-actions">
+        <button class="btn-primary" onclick="save()">Save</button>
+        <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
